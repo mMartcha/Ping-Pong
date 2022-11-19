@@ -9,7 +9,7 @@ raqueteUm = turtle.Turtle()
 raqueteUm.speed(0)     # speed of animation, '0' for MAX
 raqueteUm.color("white")
 raqueteUm.shape("square")
-raqueteUm.shapesize(largura=5, altura=1)  # 20*5 height
+raqueteUm.shapesize(stretch_wid=5, stretch_len=1)  # 20*5 height
 raqueteUm.penup()
 raqueteUm.goto(-350, 0)    
 larguraUm = 5
@@ -18,7 +18,7 @@ raqueteDois = turtle.Turtle()
 raqueteDois.speed(0)     # speed of animation, '0' for MAX
 raqueteDois.color("white")
 raqueteDois.shape("square")
-raqueteDois.shapesize(largura=5, altura=1)
+raqueteDois.shapesize(stretch_wid=5, stretch_len=1)
 raqueteDois.penup()
 raqueteDois.goto(350, 0)    
 larguraDois = 5
@@ -39,7 +39,7 @@ escritaDePontuacao.color("white")
 escritaDePontuacao.penup()
 escritaDePontuacao.hideturtle()
 escritaDePontuacao.goto(0, 260)
-escritaDePontuacao.write("Jogador Um: 0        Jogador Dois: 0", align="Centro", font=("Courier", 24, "normal"))
+escritaDePontuacao.write("Jogador Um: 0        Jogador Dois: 0", align="center", font=("Courier", 24, "normal"))
 
 def raqueteUm_up():
     y = raqueteUm.ycor()   
@@ -84,14 +84,14 @@ while True:
             bola.dy = -0.2
         pontuacaoUm += 1
         escritaDePontuacao.clear()
-        escritaDePontuacao.write("Player One: {}           Player Two: {}".format(pontuacaoUm, pontuacaoDois), align="center",
+        escritaDePontuacao.write("Jogador Um: {}           Jogador Dois: {}".format(pontuacaoUm, pontuacaoDois), align="center",
                           font=("Courier", 24, "normal"))
 
         if (larguraUm != 1 and larguraDois != 1) :
             larguraUm -= 1
             larguraDois += 1
-            raqueteUm.shapesize(largura=larguraUm, altura=1)
-            raqueteDois.shapesize(largura=larguraDois, altura=1)
+            raqueteUm.shapesize(stretch_wid=larguraUm, stretch_len=1)
+            raqueteDois.shapesize(stretch_wid=larguraDois, stretch_len=1)
     if bola.xcor() < -390:   
         bola.goto(0, 0)
         bola.dx = 0.2
@@ -101,13 +101,13 @@ while True:
             bola.dy = -0.2
         pontuacaoDois += 1
         escritaDePontuacao.clear()
-        escritaDePontuacao.write("Player One: {}           Player Two: {}".format(pontuacaoUm, pontuacaoDois), align="center",
+        escritaDePontuacao.write("Jogador Um: {}           Jogador Dois: {}".format(pontuacaoUm, pontuacaoDois), align="center",
                           font=("Courier", 24, "normal"))
         if (larguraUm != 1 and larguraDois != 1) :
             larguraDois -= 1
             larguraUm += 1
-            raqueteDois.shapesize(largura=larguraDois, altura=1)
-            raqueteUm.shapesize(largura=larguraUm, altura=1)
+            raqueteDois.shapesize(stretch_wid=larguraDois, stretch_len=1)
+            raqueteUm.shapesize(stretch_wid=larguraUm, stretch_len=1)
     if (340 < bola.xcor() < 350) and (raqueteDois.ycor() + 40 > bola.ycor() > raqueteDois.ycor() - 40):
         bola.setx(340)
         bola.dx *= -1.05
