@@ -9,19 +9,19 @@ raqueteUm = turtle.Turtle()
 raqueteUm.speed(0)     # speed of animation, '0' for MAX
 raqueteUm.color("white")
 raqueteUm.shape("square")
-raqueteUm.shapesize(stretch_wid=5, stretch_len=1)  # 20*5 height
+raqueteUm.shapesize(largura=5, altura=1)  # 20*5 height
 raqueteUm.penup()
 raqueteUm.goto(-350, 0)    # (0, 0) is in middle
-wid_one = 5
+larguraUm = 5
 #   2nd Paddle
 raqueteDois = turtle.Turtle()
 raqueteDois.speed(0)     # speed of animation, '0' for MAX
 raqueteDois.color("white")
 raqueteDois.shape("square")
-raqueteDois.shapesize(stretch_wid=5, stretch_len=1)
+raqueteDois.shapesize(largura=5, altura=1)
 raqueteDois.penup()
 raqueteDois.goto(350, 0)    # (0, 0) is in middle
-wid_two = 5
+larguraDois = 5
 #   bola
 bola = turtle.Turtle()
 bola.speed(0)     # speed of animation, '0' for MAX
@@ -91,11 +91,11 @@ while True:
         escritaDePontuacao.write("Player One: {}           Player Two: {}".format(pontuacaoUm, pontuacaoDois), align="center",
                           font=("Courier", 24, "normal"))
 
-        if (wid_one != 1 and wid_two != 1) :
-            wid_one -= 1
-            wid_two += 1
-            raqueteUm.shapesize(stretch_wid=wid_one, stretch_len=1)
-            raqueteDois.shapesize(stretch_wid=wid_two, stretch_len=1)
+        if (larguraUm != 1 and larguraDois != 1) :
+            larguraUm -= 1
+            larguraDois += 1
+            raqueteUm.shapesize(largura=larguraUm, altura=1)
+            raqueteDois.shapesize(largura=larguraDois, altura=1)
     if bola.xcor() < -390:   # past the paddle
         bola.goto(0, 0)
         bola.dx = 0.2
@@ -107,11 +107,11 @@ while True:
         escritaDePontuacao.clear()
         escritaDePontuacao.write("Player One: {}           Player Two: {}".format(pontuacaoUm, pontuacaoDois), align="center",
                           font=("Courier", 24, "normal"))
-        if (wid_one != 1 and wid_two != 1) :
-            wid_two -= 1
-            wid_one += 1
-            raqueteDois.shapesize(stretch_wid=wid_two, stretch_len=1)
-            raqueteUm.shapesize(stretch_wid=wid_one, stretch_len=1)
+        if (larguraUm != 1 and larguraDois != 1) :
+            larguraDois -= 1
+            larguraUm += 1
+            raqueteDois.shapesize(largura=larguraDois, altura=1)
+            raqueteUm.shapesize(largura=larguraUm, altura=1)
     # Collisions b/w bola & paddle
     if (340 < bola.xcor() < 350) and (raqueteDois.ycor() + 40 > bola.ycor() > raqueteDois.ycor() - 40):
         bola.setx(340)
