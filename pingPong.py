@@ -1,5 +1,12 @@
 import turtle
 import pygame
+
+nomeDoUsuario = str(input("Insira seu nome: "))
+emailDoUsuario = str(input("Insira seu email: "))
+
+gui = pygame.image.load("assets/gui.png")
+marcello = pygame.image.load("assets/marcello.png")
+
 janela = turtle.Screen()
 janela.title("Ping Pong")
 janela.bgcolor("black")
