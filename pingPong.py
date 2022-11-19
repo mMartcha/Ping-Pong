@@ -1,5 +1,4 @@
 import turtle
-import pygame
 
 janela = turtle.Screen()
 janela.title("Ping Pong")
@@ -122,6 +121,3 @@ while True:
     if pontuacaoDois and pontuacaoUm == 10:
         print("Parabens ao Vencedor!")
         break
-    print("INFORME OS DADOS DO VENCEDOR: ")
-    nomeDoUsuario = str(input("Insira seu nome: "))
-    emailDoUsuario = str(input("Insira seu email: "))
