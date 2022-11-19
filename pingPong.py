@@ -1,18 +1,13 @@
 import turtle
 import pygame
 
-nomeDoUsuario = str(input("Insira seu nome: "))
-emailDoUsuario = str(input("Insira seu email: "))
-
-gui = pygame.image.load("assets/gui.png")
-marcello = pygame.image.load("assets/marcello.png")
-
 janela = turtle.Screen()
 janela.title("Ping Pong")
 janela.bgcolor("black")
 janela.setup(width=800, height=600)
 janela.tracer(0)    
 #   raquete um
+
 raqueteUm = turtle.Turtle()
 raqueteUm.speed(0)     # velocidade da animacao, '0' 
 raqueteUm.color("white")
@@ -127,3 +122,6 @@ while True:
     if pontuacaoDois and pontuacaoUm == 10:
         print("Parabens ao Ganhador!")
         break
+    print("INFORME OS DADOS DO VENCEDOR: ")
+    nomeDoUsuario = str(input("Insira seu nome: "))
+    emailDoUsuario = str(input("Insira seu email: "))
