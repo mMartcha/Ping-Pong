@@ -1,4 +1,5 @@
 import turtle
+import pygame
 janela = turtle.Screen()
 janela.title("Ping Pong")
 janela.bgcolor("black")
@@ -6,7 +7,7 @@ janela.setup(width=800, height=600)
 janela.tracer(0)    
 #   raquete um
 raqueteUm = turtle.Turtle()
-raqueteUm.speed(0)     # velocidade da animacao, '0' for MAX
+raqueteUm.speed(0)     # velocidade da animacao, '0' 
 raqueteUm.color("white")
 raqueteUm.shape("square")
 raqueteUm.shapesize(stretch_wid=5, stretch_len=1)  # 20*5 altura
@@ -15,7 +16,7 @@ raqueteUm.goto(-350, 0)
 larguraUm = 5
 #    raquete dois
 raqueteDois = turtle.Turtle()
-raqueteDois.speed(0)     # velocidade da animacao, '0' for MAX
+raqueteDois.speed(0)     # velocidade da animacao, '0' 
 raqueteDois.color("white")
 raqueteDois.shape("square")
 raqueteDois.shapesize(stretch_wid=5, stretch_len=1)
@@ -116,6 +117,6 @@ while True:
         bola.setx(-340)
         bola.dx *= -1.05
         bola.dy *= 1.05
-    if pontuacaoDois and pontuacaoUm == 3:
+    if pontuacaoDois and pontuacaoUm == 10:
         print("Parabens ao Ganhador!")
         break
