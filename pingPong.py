@@ -120,7 +120,7 @@ while True:
         bola.dx *= -1.05
         bola.dy *= 1.05
     if pontuacaoDois and pontuacaoUm == 10:
-        print("Parabens ao Ganhador!")
+        print("Parabens ao Vencedor!")
         break
     print("INFORME OS DADOS DO VENCEDOR: ")
     nomeDoUsuario = str(input("Insira seu nome: "))
