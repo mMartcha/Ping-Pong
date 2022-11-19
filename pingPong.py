@@ -5,8 +5,12 @@ janela.title("Ping Pong")
 janela.bgcolor("black")
 janela.setup(width=800, height=600)
 janela.tracer(0)    
-#   raquete um
 
+nome = str(input("Nome do jogador: "))
+email = str(input("Email do jogador: "))
+print("Seus dados estão salvos em nosso sistema! O tempo está passando!")
+
+#   raquete um
 raqueteUm = turtle.Turtle()
 raqueteUm.speed(0)     # velocidade da animacao, '0' 
 raqueteUm.color("white")
