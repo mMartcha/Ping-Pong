@@ -3,19 +3,19 @@ janela = turtle.Screen()
 janela.title("Ping Pong")
 janela.bgcolor("black")
 janela.setup(width=800, height=600)
-janela.tracer(0)    # stops the janela from updating
-#   1st Paddle
+janela.tracer(0)    
+#   raquete um
 raqueteUm = turtle.Turtle()
-raqueteUm.speed(0)     # speed of animation, '0' for MAX
+raqueteUm.speed(0)     # velocidade da animacao, '0' for MAX
 raqueteUm.color("white")
 raqueteUm.shape("square")
-raqueteUm.shapesize(stretch_wid=5, stretch_len=1)  # 20*5 height
+raqueteUm.shapesize(stretch_wid=5, stretch_len=1)  # 20*5 altura
 raqueteUm.penup()
 raqueteUm.goto(-350, 0)    
 larguraUm = 5
-#   2nd Paddle
+#    raquete dois
 raqueteDois = turtle.Turtle()
-raqueteDois.speed(0)     # speed of animation, '0' for MAX
+raqueteDois.speed(0)     # velocidade da animacao, '0' for MAX
 raqueteDois.color("white")
 raqueteDois.shape("square")
 raqueteDois.shapesize(stretch_wid=5, stretch_len=1)
@@ -38,7 +38,7 @@ escritaDePontuacao.speed(0)
 escritaDePontuacao.color("white")
 escritaDePontuacao.penup()
 escritaDePontuacao.hideturtle()
-escritaDePontuacao.goto(0, 260)
+escritaDePontuacao.goto(0, 250)
 escritaDePontuacao.write("Jogador Um: 0        Jogador Dois: 0", align="center", font=("Courier", 24, "normal"))
 
 def raqueteUm_up():
@@ -116,3 +116,6 @@ while True:
         bola.setx(-340)
         bola.dx *= -1.05
         bola.dy *= 1.05
+    if pontuacaoDois and pontuacaoUm == 3:
+        print("Parabens ao Ganhador!")
+        break
