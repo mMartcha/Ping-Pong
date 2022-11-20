@@ -124,4 +124,4 @@ while True:
         bola.dy *= 1.05
     if pontuacaoDois and pontuacaoUm == 10:
         print("Parabens ao Vencedor!")
-        
+        break
